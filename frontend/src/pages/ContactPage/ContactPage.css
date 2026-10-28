@@ -1,0 +1,445 @@
+.section-heading h2,.story-copy h2,.about-columns h2,.contact-bottom h2 {
+  font:600 40px/1.15 var(--serif);
+  letter-spacing:-.04em;
+  margin:14px 0 0;
+}
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  max-width:1000px;
+  margin:0 auto 55px;
+}
+
+.contact-card {
+  border:1px solid var(--line);
+  padding:25px 23px;
+  min-height:230px;
+}
+
+.contact-icon {
+  width:39px;
+  height:39px;
+  border:1px solid #d8d8ca;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--green);
+  margin-bottom:23px;
+}
+
+.contact-icon svg {
+  width:17px;
+}
+
+.contact-card>span {
+  font-size:10px;
+  letter-spacing:.13em;
+  color:#85877b;
+}
+
+.contact-card h3 {
+  font:600 17px var(--serif);
+  margin:9px 0;
+}
+
+.contact-card p {
+  font-size:12px;
+  color:#77796f;
+  line-height:1.7;
+  min-height:30px;
+}
+
+.contact-card a {
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  text-decoration:none;
+  color:var(--green);
+  font-size:12px;
+  margin-top:8px;
+}
+
+.contact-bottom {
+  max-width:1000px;
+  margin:0 auto;
+  background:#eeece3;
+  padding:27px 32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.contact-bottom h2 {
+  font-size:28px;
+  margin:0 0 8px;
+}
+
+.contact-bottom p {
+  font-size:12px;
+  line-height:1.7;
+  color:#77796f;
+  max-width:450px;
+  margin:0;
+}
+
+@media (max-width:760px) {
+  .contact-grid {
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .contact-card {
+    min-height:auto;
+    padding:21px;
+  }
+  .contact-icon {
+    margin-bottom:14px;
+  }
+  .contact-card p {
+    min-height:0;
+  }
+  .contact-bottom {
+    padding:24px;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+
+
+/* =========================
+   CALLBACK MODAL
+   ========================= */
+
+.callback-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(8px);
+
+  animation: callbackFadeIn 0.2s ease;
+}
+
+.callback-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 480px;
+
+  padding: 42px;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
+
+  animation: callbackSlideIn 0.25s ease;
+}
+
+.callback-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f2f2f2;
+  color: #222;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.callback-close:hover {
+  background: #e5e5e5;
+}
+
+.callback-header {
+  padding-right: 30px;
+}
+
+.callback-header > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+
+  color: #999;
+}
+
+.callback-header h2 {
+  margin: 0 0 12px;
+
+  font-size: 32px;
+  line-height: 1.1;
+
+  color: #181818;
+}
+
+.callback-header h2 em {
+  font-style: normal;
+}
+
+.callback-header p {
+  margin: 0 0 30px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: #777;
+}
+
+.callback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.callback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.callback-form label span {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #333;
+}
+
+.callback-form input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 15px 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fafafa;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  transition: 0.2s ease;
+}
+
+.callback-form input:focus {
+  border-color: #222;
+  background: #fff;
+}
+
+.callback-form input::placeholder {
+  color: #aaa;
+}
+
+.callback-submit {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 6px;
+  padding: 15px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--green);
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.callback-submit:hover {
+  background: #333;
+}
+
+.callback-submit:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes callbackFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes callbackSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+  .callback-overlay {
+    padding: 16px;
+  }
+
+  .callback-modal {
+    padding: 32px 22px;
+    border-radius: 16px;
+  }
+
+  .callback-header h2 {
+    font-size: 27px;
+  }
+}
+/* =========================
+   CALLBACK SUCCESS / ERROR
+   ========================= */
+
+.callback-success {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px 4px;
+}
+
+.callback-success-icon {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  animation: callbackSuccessPop 0.35s ease;
+}
+
+.callback-success > span {
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #999;
+}
+
+.callback-success h2 {
+  margin: 0 0 12px;
+  font-size: 32px;
+  line-height: 1.1;
+  color: #181818;
+}
+
+.callback-success h2 em {
+  font-style: normal;
+}
+
+.callback-success p {
+  max-width: 340px;
+  margin: 0 0 26px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #777;
+}
+
+.callback-success-button {
+  padding: 13px 18px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  color: #222;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.callback-success-button:hover {
+  border-color: #222;
+  background: #fafafa;
+}
+
+.callback-error {
+  margin: -2px 0 0 !important;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #b42318 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+.callback-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+@keyframes callbackSuccessPop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .callback-success-icon {
+    animation: none;
+  }
+}

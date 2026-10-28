@@ -1,0 +1,31 @@
+.menu-filter {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:35px;
+}
+
+.filter-pill {
+  background:transparent;
+  border:1px solid #d9d7cc;
+  padding:10px 15px;
+  color:#6e7067;
+  font-size:14px;
+  transition:all .2s;
+}
+
+.filter-pill.selected,.filter-pill:hover {
+  background:var(--green);
+  border-color:var(--green);
+  color:white;
+}
+
+@media (max-width:760px) {
+  .menu-filter {
+    justify-content:flex-start;
+  }
+  .filter-pill {
+    padding:9px 11px;
+  }
+}

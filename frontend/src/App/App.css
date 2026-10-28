@@ -1,0 +1,25 @@
+/* Root-level application feedback styles. */
+.toast {
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  background:var(--green-dark);
+  color:white;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:11px;
+  box-shadow:0 8px 30px #0002;
+  z-index:20;
+  animation:fadeUp .2s both;
+}
+
+.app-shell {
+  min-height: 100vh;
+   display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1
+}

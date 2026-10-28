@@ -1,0 +1,76 @@
+.brand {
+  border:0;
+  background:none;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:0;
+  text-align:left;
+  color:var(--ink);
+  cursor:pointer;
+}
+
+.brand-emblem {
+  width:39px;
+  height:39px;
+  border:1px solid var(--green);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  position:relative;
+  color:var(--green);
+  flex:0 0 auto;
+}
+
+.brand-emblem::before,
+.brand-emblem::after {
+  content:'';
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:var(--orange);
+  border-radius:50%;
+}
+
+.brand-emblem::before { top:5px; }
+.brand-emblem::after { bottom:5px; }
+
+.brand-emblem span {
+  font-family:var(--serif);
+  font-size:22px;
+  line-height:1;
+  transform:translateY(-1px);
+}
+
+.brand-wordmark {
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+}
+
+.brand-wordmark strong {
+  font-family:var(--serif);
+  font-size:25px;
+  font-weight:700;
+  letter-spacing:.06em;
+  line-height:.95;
+  color:var(--green-dark);
+}
+
+.brand-wordmark span {
+  font-size:9px;
+  line-height:1.2;
+  letter-spacing:.22em;
+  color:#85877d;
+  white-space:nowrap;
+}
+
+@media (max-width:760px) {
+  .brand-emblem {
+    width:34px;
+    height:34px;
+  }
+  .brand-emblem span { font-size:19px; }
+  .brand-wordmark strong { font-size:22px; }
+  .brand-wordmark span { font-size:6px; letter-spacing:.18em; }
+}

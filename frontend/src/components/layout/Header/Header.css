@@ -1,0 +1,159 @@
+.announcement {
+  height:34px;
+  background:#293f2e;
+  color:#e9e8d9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.announcement-dot {
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#d5a16e;
+}
+
+.site-header {
+  height:88px;
+  padding:0 6.3%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  position:relative;
+  z-index:5;
+  background:var(--cream);
+}
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:31px;
+}
+
+.nav-link {
+  background:none;
+  border:0;
+  color:#6d7067;
+  font-size:16px;
+  padding:12px 0;
+  position:relative;
+}
+
+.nav-link:after {
+  content:'';
+  height:1px;
+  width:0;
+  position:absolute;
+  bottom:4px;
+  left:0;
+  background:var(--orange);
+  transition:width .2s;
+}
+
+.nav-link:hover:after,.nav-link.active:after {
+  width:100%;
+}
+
+.nav-link.active {
+  color:var(--ink);
+}
+
+.header-actions {
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.cart-link {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid #d9d7cc;
+  background:transparent;
+  padding:11px 13px;
+  font-size:16px;
+  color:var(--ink);
+}
+
+.cart-count {
+  background:var(--green);
+  color:white;
+  border-radius:50%;
+  height:20px;
+  min-width:20px;
+  display:grid;
+  place-items:center;
+  font-size:12px;
+}
+
+.mobile-menu {
+  display:none;
+  border:0;
+  background:transparent;
+  color:var(--ink);
+}
+
+@media (max-width:1050px) {
+  .site-header {
+    padding:0 4%;
+  }
+  .nav-links {
+    gap:18px;
+  }
+}
+
+@media (max-width:760px) {
+  .announcement {
+    font-size:10px;
+    letter-spacing:.06em;
+  }
+  .site-header {
+    height:72px;
+    padding:0 5%;
+  }
+  .brand-mark {
+    font-size:25px;
+  }
+  .brand-copy b {
+    font-size:12px;
+  }
+  .brand-copy small {
+    font-size:7px;
+  }
+  .mobile-menu {
+    display:block;
+    padding:5px;
+  }
+  .cart-link {
+    padding:9px;
+    gap:6px;
+  }
+  .cart-link span {
+    display:none;
+  }
+  .nav-links {
+    display:none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:71px;
+    background:var(--cream);
+    padding:15px 5% 22px;
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+  }
+  .nav-links.open {
+    display:flex;
+  }
+  .nav-link {
+    padding:9px 0;
+  }
+}

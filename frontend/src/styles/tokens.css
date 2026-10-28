@@ -1,0 +1,54 @@
+@font-face {
+  font-family:'Inter Local';
+  src:url('../fonts/Inter-Regular.otf') format('opentype');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face {
+  font-family:'Inter Local';
+  src:url('../fonts/Inter-Medium.otf') format('opentype');
+  font-weight:500;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face {
+  font-family:'Inter Local';
+  src:url('../fonts/Inter-SemiBold.otf') format('opentype');
+  font-weight:600;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face {
+  font-family:'Inter Local';
+  src:url('../fonts/Inter-Bold.otf') format('opentype');
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face {
+  font-family:'Playfair Local';
+  src:url('../fonts/PlayfairDisplay-Regular.otf') format('opentype');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face {
+  font-family:'Playfair Local';
+  src:url('../fonts/PlayfairDisplay-Bold.otf') format('opentype');
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+
+:root{
+  font-family:'Inter Local',Arial,sans-serif;
+  color:#23271f;
+  background:#f7f5ef;
+  font-synthesis:none;
+  text-rendering:optimizeLegibility;
+  --sans:'Inter Local',Arial,sans-serif;
+  --ink:#23271f; --muted:#70736a; --cream:#f7f5ef;
+  --green:#334c36; --green-dark:#243a29; --orange:#c66c43;
+  --line:#e4e0d6; --serif:'Playfair Local',Georgia,serif;
+}
